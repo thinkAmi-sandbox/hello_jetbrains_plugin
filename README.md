@@ -42,3 +42,8 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
 [docs:plugin-description]: https://plugins.jetbrains.com/docs/intellij/plugin-user-experience.html#plugin-description-and-presentation
+
+
+## Related Blog (Written in Japanese)
+
+- [IntelliJ Platform Plugin Templateを使って、「エディタのコンテキストメニューからダイアログを表示する」だけのJetBrains系IDEプラグインを作ってみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/02/21/232451)
