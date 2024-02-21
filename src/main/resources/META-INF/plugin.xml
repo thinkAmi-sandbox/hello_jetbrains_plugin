@@ -15,4 +15,13 @@
     <applicationListeners>
         <listener class="com.github.thinkami.hellojetbrainsplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+
+    <actions>
+        <action id="com.github.thinkami.hellojetbrainsplugin.actions.HelloAction"
+                class="com.github.thinkami.hellojetbrainsplugin.actions.HelloAction"
+                text="Hello Action"
+                description="hello world action">
+            <add-to-group group-id="EditorPopupMenu" anchor="first" />
+        </action>
+    </actions>
 </idea-plugin>
