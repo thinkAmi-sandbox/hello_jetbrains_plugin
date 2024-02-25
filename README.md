@@ -47,3 +47,4 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 ## Related Blog (Written in Japanese)
 
 - [IntelliJ Platform Plugin Templateを使って、「エディタのコンテキストメニューからダイアログを表示する」だけのJetBrains系IDEプラグインを作ってみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/02/21/232451)
+- [IntelliJ Platform Plugin開発で、Kotlin UI DSL Version 2 や Swing を使って、ToolWindow上にコンポーネントを表示してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/02/25/173458)
