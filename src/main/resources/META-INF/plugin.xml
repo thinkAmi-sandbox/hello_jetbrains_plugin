@@ -25,4 +25,9 @@
             <add-to-group group-id="EditorPopupMenu" anchor="first" />
         </action>
     </actions>
+
+    <!-- If you use RubyMine, please enable the following start  -->
+<!--    <depends>com.intellij.modules.ruby</depends>-->
+<!--    <depends>com.intellij.modules.platform</depends>-->
+    <!-- If you use RubyMine, please enable the following end  -->
 </idea-plugin>
