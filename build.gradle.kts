@@ -128,4 +128,19 @@ tasks {
         // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
         channels = properties("pluginVersion").map { listOf(it.substringAfter('-').substringBefore('.').ifEmpty { "default" }) }
     }
+
+    runIde {
+        // executable other IDE
+        if (properties("ideDir").get().isNotEmpty()) {
+            // Kotlin
+            ideDir.set(file(properties("ideDir")))
+            // Groovy
+            // ideDir = file(properties("ideDir"))
+        }
+
+        // specific JBR version
+        if (properties("ideDir").get().isNotEmpty()) {
+            jbrVersion.set(properties("jbrVersion"))
+        }
+    }
 }
