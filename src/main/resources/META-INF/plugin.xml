@@ -11,6 +11,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.HelloToolWindowFactory" id="HelloToolWindow"/>
+        <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.UpdateInActionToolWindowFactory" id="UpdateInActionToolWindow"/>
     </extensions>
 
     <applicationListeners>
