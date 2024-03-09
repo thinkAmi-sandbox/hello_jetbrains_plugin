@@ -11,7 +11,7 @@ import javax.swing.event.DocumentListener
 
 class AppleTableContent {
     var contentPanel : DialogPanel
-    lateinit var myTableModel: Cell<JBScrollPane>
+    lateinit var myTableModel: Cell<JBTable>
     lateinit var searchText: Cell<JBTextField>
     val appleTableModel: AppleTableModel
 
@@ -39,7 +39,7 @@ class AppleTableContent {
             row {
                 val table = JBTable()
                 table.model = appleTableModel
-                myTableModel = cell(JBScrollPane(table))
+                myTableModel = scrollCell(table)
             }
         }
     }
