@@ -29,6 +29,10 @@ class AppleTableModel : AbstractTableModel() {
         return tableData[rowIndex][columnIndex]
     }
 
+    override fun getColumnName(column: Int): String {
+        return columns[column]
+    }
+
     fun filterChanged() {
         tableData = allData.filter {
             val name = it[1] // Nameで絞り込むため、列番号を指定
