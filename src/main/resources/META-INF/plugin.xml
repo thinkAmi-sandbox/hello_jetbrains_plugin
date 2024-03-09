@@ -9,6 +9,7 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.AppleTableToolWindowFactory" id="AppleTable"/>
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.HelloToolWindowFactory" id="HelloToolWindow"/>
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.UpdateInActionToolWindowFactory" id="UpdateInActionToolWindow"/>
