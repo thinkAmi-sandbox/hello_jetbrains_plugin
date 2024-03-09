@@ -10,10 +10,14 @@ class AppleTableModel : AbstractTableModel() {
     )
     val columns: List<String> = listOf("No", "Name", "Color")
 
-    lateinit var tableData: List<List<String>>
+    var tableData: List<List<String>>
+    val tableFilter: AppleTableFilter
 
     init {
-        // 初期段階で絞り込みを実行する
+        // 初期条件による絞り込みを実行するため、初期値を設定しておく
+        tableData = allData.toList()
+
+        tableFilter = AppleTableFilter(this)
         filterChanged()
     }
 
@@ -36,8 +40,7 @@ class AppleTableModel : AbstractTableModel() {
     fun filterChanged() {
         tableData = allData.filter {
             val name = it[1] // Nameで絞り込むため、列番号を指定
-            val regex = Regex("シナノ")
-            regex.containsMatchIn(name)
+            name.contains(this.tableFilter.filterText)
         }.toList() // allDataとは別オブジェクトにするため toList する
 
         // filterが更新されたことを通知する
