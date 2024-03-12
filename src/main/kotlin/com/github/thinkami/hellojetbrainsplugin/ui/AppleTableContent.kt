@@ -1,7 +1,6 @@
 package com.github.thinkami.hellojetbrainsplugin.ui
 
 import com.intellij.openapi.ui.DialogPanel
-import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.components.JBTextField
 import com.intellij.ui.dsl.builder.Cell
 import com.intellij.ui.dsl.builder.panel
@@ -39,6 +38,7 @@ class AppleTableContent {
             row {
                 val table = JBTable()
                 table.model = appleTableModel
+                table.columnModel.getColumn(2).cellRenderer = AppleTableCellRenderer()
                 myTableModel = scrollCell(table)
             }
         }
