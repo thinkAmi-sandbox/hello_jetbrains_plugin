@@ -1,5 +1,6 @@
 package com.github.thinkami.hellojetbrainsplugin.ui
 
+import com.github.thinkami.hellojetbrainsplugin.actions.SettingsAction
 import com.intellij.openapi.ui.DialogPanel
 import com.intellij.ui.components.JBTextField
 import com.intellij.ui.dsl.builder.Cell
@@ -18,6 +19,9 @@ class AppleTableContent {
         appleTableModel = AppleTableModel()
 
         contentPanel = panel {
+            row {
+                button("Settings", SettingsAction())
+            }
             row {
                 label("Search text")
                 searchText = textField()
