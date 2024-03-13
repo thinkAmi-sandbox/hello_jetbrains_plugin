@@ -1,5 +1,6 @@
 package com.github.thinkami.hellojetbrainsplugin.ui
 
+import com.intellij.ide.util.PropertiesComponent
 import javax.swing.table.AbstractTableModel
 
 class AppleTableModel : AbstractTableModel() {
@@ -40,7 +41,14 @@ class AppleTableModel : AbstractTableModel() {
     fun filterChanged() {
         tableData = allData.filter {
             val name = it[1] // Nameで絞り込むため、列番号を指定
-            name.contains(this.tableFilter.filterText)
+
+            // 絞り込み条件を設定から取得して使用する
+            val matchType = PropertiesComponent.getInstance().getValue("matchType")
+            if (matchType == "Partial match") {
+                name.contains(this.tableFilter.filterText)
+            } else {
+                name.startsWith(this.tableFilter.filterText)
+            }
         }.toList() // allDataとは別オブジェクトにするため toList する
 
         // filterが更新されたことを通知する
