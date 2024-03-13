@@ -8,8 +8,10 @@ class SettingsAction: AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
         val dialog = SettingsDialog()
         if (dialog.showAndGet()) {
-            // OKボタンをクリックした場合に、コンソールへHelloを出力する
-            println("Hello")
+            // OKボタンをクリックしたときに、コンソールへコンボボックスの選択値を出力する
+            val combo = dialog.comboBox
+            val selectedType = combo.getItemAt(combo.selectedIndex)
+            println(selectedType)
         }
     }
 }
