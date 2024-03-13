@@ -52,3 +52,4 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 - [IntelliJ Platform Pluginの開発にて、ApplicationManagerやToolWindowManagerを使って、Actionの中でToolWindow上のlabelを更新してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/08/000506)
 - [IntelliJ Platform Pluginの開発にて、ToolWindow上で、TextFieldの入力値に従って絞り込み可能なテーブル(JBTable)を表示してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/09/232514)
 - [IntelliJ Platform Pluginの開発にて、ToolWindow上で、CellRendererを使ってテーブル(JBTable)の列に画像を表示してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/12/231534)
+- [IntelliJ Platform Pluginの開発にて、ToolWindow上で、DialogWrapperとPropertiesComponentを使って、設定の保存と読み込みを行ってみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/14/001226)
