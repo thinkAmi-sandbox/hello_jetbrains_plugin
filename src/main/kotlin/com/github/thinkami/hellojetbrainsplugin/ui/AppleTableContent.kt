@@ -2,7 +2,7 @@ package com.github.thinkami.hellojetbrainsplugin.ui
 
 import com.github.thinkami.hellojetbrainsplugin.actions.SettingsAction
 import com.intellij.openapi.ui.DialogPanel
-import com.intellij.ui.components.JBTextField
+import com.intellij.ui.SearchTextField
 import com.intellij.ui.dsl.builder.Cell
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.ui.table.JBTable
@@ -12,7 +12,7 @@ import javax.swing.event.DocumentListener
 class AppleTableContent {
     var contentPanel : DialogPanel
     lateinit var myTableModel: Cell<JBTable>
-    lateinit var searchText: Cell<JBTextField>
+    lateinit var searchText: Cell<SearchTextField>
     val appleTableModel: AppleTableModel
 
     init {
@@ -24,8 +24,8 @@ class AppleTableContent {
             }
             row {
                 label("Search text")
-                searchText = textField()
-                searchText.component.document.addDocumentListener(object: DocumentListener {
+                searchText = cell(SearchTextField())
+                searchText.component.addDocumentListener(object: DocumentListener {
                     override fun insertUpdate(e: DocumentEvent?) {
                         handleChange()
                     }
