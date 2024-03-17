@@ -13,6 +13,10 @@
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.HelloToolWindowFactory" id="HelloToolWindow"/>
         <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.UpdateInActionToolWindowFactory" id="UpdateInActionToolWindow"/>
+        <toolWindow factoryClass="com.github.thinkami.hellojetbrainsplugin.toolWindow.NotificationToolWindowFactory"
+                    id="NotificationToolWindow" anchor="right"
+        />
+        <notificationGroup displayType="BALLOON" id="notificationGroupId" />
     </extensions>
 
     <applicationListeners>
