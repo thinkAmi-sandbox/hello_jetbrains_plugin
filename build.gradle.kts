@@ -1,8 +1,16 @@
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
+import java.io.FileInputStream
+import java.util.*
 
 fun properties(key: String) = providers.gradleProperty(key)
 fun environment(key: String) = providers.environmentVariable(key)
+
+// load local.properties
+val localPropertiesFileExists = File(rootProject.rootDir, "local.properties").exists()
+val prop = if (localPropertiesFileExists) Properties().apply {
+    load(FileInputStream(File(rootProject.rootDir, "local.properties")))
+} else null
 
 plugins {
     id("java") // Java support
@@ -131,15 +139,18 @@ tasks {
 
     runIde {
         // executable other IDE
-        if (properties("ideDir").get().isNotEmpty()) {
-            // Kotlin
-            ideDir.set(file(properties("ideDir")))
-            // Groovy
-            // ideDir = file(properties("ideDir"))
-        }
+        if (prop != null) {
+            val d = prop.getProperty("ideDir")
+            if (d.isNotEmpty()) {
+                // written by Kotlin
+                ideDir.set(file(prop.getProperty("ideDir")))
 
+                // written by Groovy
+                // ideDir = file(file(prop.getProperty("ideDir")))
+            }
+        }
         // specific JBR version
-        if (properties("ideDir").get().isNotEmpty()) {
+        if (properties("jbrVersion").get().isNotEmpty()) {
             jbrVersion.set(properties("jbrVersion"))
         }
     }

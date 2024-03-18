@@ -4,4 +4,4 @@
 build
 
 # additional items
-gradle.properties
+local.properties
