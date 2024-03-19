@@ -1,0 +1,6 @@
+######### hello plugin settings #########
+# executable IDE directory
+## Note: When using RubyMine, please set up in platformPlugins.
+##       In addition, please add RubyMine settings in plugin.xml.
+## for Windows example: ideDir = C:\\Users\\<UserName>\\AppData\\Local\\JetBrains\\Toolbox\\apps\\RubyMine\\<ch-n>\\232.10300.41
+ideDir =
