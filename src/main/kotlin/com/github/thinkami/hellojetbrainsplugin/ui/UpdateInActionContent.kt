@@ -1,5 +1,7 @@
 package com.github.thinkami.hellojetbrainsplugin.ui
 
+import com.github.thinkami.hellojetbrainsplugin.actions.HeavyActionWithBackground
+import com.github.thinkami.hellojetbrainsplugin.actions.HeavyActionWithoutBackground
 import com.github.thinkami.hellojetbrainsplugin.actions.UpdateLabelAction
 import com.intellij.openapi.ui.DialogPanel
 import com.intellij.ui.dsl.builder.Cell
@@ -19,6 +21,13 @@ class UpdateInActionContent {
 
                 button("Run Function") { event -> handleClick(event) }
                 button("Run Action", UpdateLabelAction())
+            }
+
+            row {
+                label("Heavy actions")
+
+                button("Heavy Action Without Background", HeavyActionWithoutBackground())
+                button("Heavy Action With Background", HeavyActionWithBackground())
             }
         }
     }
