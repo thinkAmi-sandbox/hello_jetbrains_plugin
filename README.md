@@ -56,4 +56,4 @@ Plugin based on the [IntelliJ Platform Plugin Template][template].
 - [IntelliJ Platform Pluginの開発にて、ToolWindow上で、テーブルの絞り込み条件入力で使うコンポーネントを SearchTextField にしてみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/14/204818)
 - [IntelliJ Platform Pluginの開発にて、ToolWindow上で、Dialog・Balloon・StatusBarなどを使って改行ありのメッセージを表示してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/17/103752)
 - [IntelliJ Platform Pluginの開発にて、開発環境にある公開したくない情報を local.properties に定義してビルドする - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/19/203222)
-
+- [IntelliJ Platform Pluginの開発にて、Task.Backgroundableを使って重い処理をバックグラウンド実行してみた - メモ的な思考的な](https://thinkami.hatenablog.com/entry/2024/03/20/195702)
